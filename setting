@@ -25,3 +25,12 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update && sudo apt upgrade -y
 sudo apt install ros-humble-desktop
 source /opt/ros/humble/setup.bash
+
+# Issac Sim
+https://www.nvidia.com/en-us/omniverse/download/ 링크에서 Linux 버전으로 다운로드
+sudo chmod +x omniverse-launcher-linux.AppImage
+./omniverse-launcher-linux.AppImage
+sudo apt install libfuse2 #실행 안되면 이거
+
+# Issac Sim 내부 설정
+NUCLEUS -> + 버튼 -> user name, type password, comfirm password 채워서 다음 -> EXCHANGE에서 cache 다운로드 -> EXCHANGE에서 sim 다운로드
