@@ -15,20 +15,14 @@ sudo gedit /usr/share/X11/xkb/symbols/altwin
 RALT - Alt_R, Meta_R => Hangul로 바꾸고 재부팅
 
 # ROS2
-locale  # check for UTF-8
-sudo apt update && sudo apt install locales
-sudo locale-gen en_US en_US.UTF-8
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-export LANG=en_US.UTF-8
-locale  # verify settings
-sudo apt install software-properties-common
-sudo add-apt-repository universe
-sudo apt update && sudo apt install curl -y
-sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-sudo apt update && sudo apt upgrade -y
-sudo apt install ros-humble-desktop
-source /opt/ros/humble/setup.bash
+
+# cuda, cudnn
+sudo cp include/cudnn*.h /usr/local/cuda-12.6/include # 경로복사
+sudo cp lib/libcudnn* /usr/local/cuda-12.6/lib64
+
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}} # 환경변수 저장
+export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 
 # Issac Sim
 https://www.nvidia.com/en-us/omniverse/download/ 링크에서 Linux 버전으로 다운로드
