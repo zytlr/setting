@@ -15,8 +15,11 @@ sudo gedit /usr/share/X11/xkb/symbols/altwin
 RALT - Alt_R, Meta_R => Hangul로 바꾸고 재부팅
 
 # ROS2
+공식 페이지 https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
 
 # cuda, cudnn
+참고 블로그 https://m.blog.naver.com/lcs5382/223476471122
+
 sudo cp include/cudnn*.h /usr/local/cuda-12.6/include # 경로복사
 sudo cp lib/libcudnn* /usr/local/cuda-12.6/lib64
 
