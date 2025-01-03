@@ -34,5 +34,5 @@ sudo chmod +x omniverse-launcher-linux.AppImage
 sudo apt install libfuse2 #실행 안되면 이거
 
 # Issac Sim 내부 설정
-NUCLEUS -> + 버튼 -> user name, type password, comfirm password 채워서 다음 -> EXCHANGE에서 cache 다운로드 -> EXCHANGE에서 sim 다운로드
+NUCLEUS -> + 버튼 -> user name, type password, comfirm password 채워서 다음 -> EXCHANGE에서 cache,sim, usd composer 다운로드
 
