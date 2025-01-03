@@ -1,6 +1,10 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install terminator -y
 
+# graphic driver
+sudo ubuntu-drivers autoinstall
+
+
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
@@ -34,3 +38,4 @@ sudo apt install libfuse2 #실행 안되면 이거
 
 # Issac Sim 내부 설정
 NUCLEUS -> + 버튼 -> user name, type password, comfirm password 채워서 다음 -> EXCHANGE에서 cache 다운로드 -> EXCHANGE에서 sim 다운로드
+
